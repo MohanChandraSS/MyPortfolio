@@ -514,18 +514,6 @@
 
       <div style="margin-bottom: 50px;"></div>
 
-      <script>
-        // Function to show alert and reset form
-        function sendMessage() {
-          alert("Thank you for contacting!");
-          document.getElementById("contactForm").reset();
-        }
-      
-        // Function to print resume
-        function printResume() {
-          window.print();
-        }
-      </script>
 
     <script>
     // Function to show alert and reset form
@@ -538,6 +526,15 @@
     function viewResume() {
         window.open('https://github.com/MohanChandraSS/MyPortfolio/blob/6ffd15f2f94e15b63bac2b11a6527b99c6b7c422/resume%20.pdf');
     }
+
+      // Function to print the resume
+    function printResume() {
+        // Open the resume in a new window
+        var printWindow = window.open('https://github.com/MohanChandraSS/MyPortfolio/raw/6ffd15f2f94e15b63bac2b11a6527b99c6b7c422/resume%20.pdf', '_blank');
+        printWindow.onload = function() {
+            // Once the PDF is loaded, trigger the print dialog
+            printWindow.print();
+        };
 
     // Function to download the resume
     function downloadResume() {
