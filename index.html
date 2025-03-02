@@ -529,12 +529,14 @@
 
       // Function to print the resume
     function printResume() {
-        // Open the resume in a new window
-        var printWindow = window.open('https://docs.google.com/document/d/1VskbORia4Cj-79vITIiNjpEZvoPfMpI9gRCjQxkrKBg/edit?usp=sharing', '_blank');
+        // Open the Google Docs document in view mode
+        var printWindow = window.open('https://docs.google.com/document/d/1VskbORia4Cj-79vITIiNjpEZvoPfMpI9gRCjQxkrKBg/export?format=pdf', '_blank');
+        
+        // Once the PDF is loaded, trigger the print dialog
         printWindow.onload = function() {
-            // Once the PDF is loaded, trigger the print dialog
             printWindow.print();
         };
+    }
 
     // Function to download the resume
     function downloadResume() {
